@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eeefff;
+}
+.container{
+    position: relative
+;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container .drop{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    box-shadow: inset 20px 20px 20px rgba(0,0,0, 0.05),
+     25px 35px 20px rgba(0,0, 0, 0.05),
+    25px 20px 20px rgba(0,0,0, 0.05),
+    inset -25px -20px 25px rgba(255, 255, 255, 0.09);
+    
+    border-radius: 50%;
+}
+/* .container .drop1{
+    /* position: relative; 
+    margin-left: 200px;
+    width: 60px;
+    height: 60px;
+    box-shadow: inset 20px 20px 20px rgba(0,0,0, 0.05),
+     25px 35px 20px rgba(0,0, 0, 0.05),
+    25px 20px 20px rgba(0,0,0, 0.05),
+    inset -25px -20px 25px rgba(255, 255, 255, 0.09);
+    
+    border-radius: 50%;
+} */
+
+.container .drop::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 78px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+}
+.container .drop::after{
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+}
+.clock{
+ background: url('https://www.vippng.com/png/full/11-111127_clock-png.png');
+  margin: 10px;
+ 
+ width: 330px;
+height: 330px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-size: cover;
+
+
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #4d4b4b;
+    border-radius: 50%;
+    z-index: 1000;
+}
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position: absolute;
+}
+.clock .hour, .hr{
+width: 160px;
+height: 160px;
+}
+.clock .min, .mn{
+    width:190px;
+    height: 190px;
+}
+.clock .sec, .sc{
+    width:230px ;
+    height: 230px;
+    
+}
+.hr ,.mn ,.sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+  
+}
+/* needles of clock */
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 90px;
+    background-color: aqua;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 88px;
+    background-color:cadetblue;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color:coral;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+} 
